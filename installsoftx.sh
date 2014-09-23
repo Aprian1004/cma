@@ -2,7 +2,7 @@
 
 #link download 
 #Update dulu
-#su -c "apt-get update; apt-get install build-essential"
+su -c "apt-get update; apt-get install build-essential"
 
 #Tanya veris debian:
 echo -n "Versi Debian (1. 32bit, 2. 64.bit)"
