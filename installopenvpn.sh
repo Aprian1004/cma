@@ -6,6 +6,8 @@ OS=`uname -m`;
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0'`;
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 
+#link download: https://raw.githubusercontent.com/cmaimu/debian7/master/installopenvpn.sh
+
 #cek ready tidak-nya
 cat /dev/net/tun
 
@@ -36,8 +38,8 @@ openvpn --genkey --secret keys/ta.key
 
 #buat config server UDP dan TCP
 cd /etc/openvpn
-wget -O /etc/ovenvpn/server-udp-1194.conf "https://raw.githubusercontent.com/cmaimu/debian7/master/server-udp-1194.conf"
-wget -O /etc/ovenvpn/server-tcp-465.conf "https://raw.githubusercontent.com/cmaimu/debian7/master/server-tcp-465.conf"
+wget -O server-udp-1194.conf "https://raw.githubusercontent.com/cmaimu/debian7/master/server-udp-1194.conf"
+wget -O server-tcp-465.conf "https://raw.githubusercontent.com/cmaimu/debian7/master/server-tcp-465.conf"
 
 mkdir /etc/openvpn/keys
 
@@ -86,8 +88,8 @@ cp /etc/openvpn/easy-rsa/2.0/keys/{ca.crt,ta.key} clientconfig/
 cd /etc/openvpn/clientconfig
 wget https://raw.githubusercontent.com/cmaimu/debian7/master/client-udp-1194.ovpn 
 wget https://raw.githubusercontent.com/cmaimu/debian7/master/client-tcp-465.ovpn
-sed -i 's/xxxxxxxxxxxx/$ipvps/g' /etc/openvpn/clientconfig/client-udp-1194.ovpn
-sed -i 's/xxxxxxxxxxxx/$ipvps/g' /etc/openvpn/clientconfig/client-udp-465.ovpn
+sed -i "s/xxxxxxxxxxxx/$ipvps/g" client-udp-1194.ovpn
+sed -i "s/xxxxxxxxxxxx/$ipvps/g" client-udp-465.ovpn
 
 zip client.zip
 
@@ -95,4 +97,3 @@ echo "Silahkan bagikan file client.zip pada membernya"
 
 #Modified by Ahmad Jibril
 #Source: ari-f.com
-#source: yurisshOS
