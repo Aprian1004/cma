@@ -2,9 +2,9 @@
 
 #config softether
 mv ~/vpnku/vpnserver /usr/local
-chmod 600 *
-chmod 700 vpncmd
-chmod 700 vpnserver
+chmod 600 /usr/local/vpnserver/*
+chmod 700 /usr/local/vpnserver/vpncmd
+chmod 700 /usr/local/vpnserver/vpnserver
 wget -O /etc/init.d/vpnserver "https://raw.githubusercontent.com/cmaimu/debian7/master/softex.sh"
 chmod 755 /etc/init.d/vpnserver;
 mkdir /var/lock/subsys;
