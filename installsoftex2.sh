@@ -21,7 +21,7 @@ then
 wget http://www.softether-download.com/files/softether/v2.00-9387-rtm-2013.09.16-tree/Linux/SoftEther%20VPN%20Server/64bit%20-%20Intel%20x64%20or%20AMD64/softether-vpnserver-v2.00-9387-rtm-2013.09.16-linux-x64-64bit.tar.gz
 tar zxvf softether-vpnserver-v2.00-9387-rtm-2013.09.16-linux-x64-64bit.tar.gz
 fi
-fi
+
 
 #Pemindahan file dan pemberian hak eksekusi
 mv vpnserver /usr/local
