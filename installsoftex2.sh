@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#link download https://raw.githubusercontent.com/cmaimu/debian7/master/installsoftx.sh
+#link download https://raw.githubusercontent.com/cmaimu/debian7/master/installsoftex2.sh
 #Update dulu
 su -c "apt-get update; apt-get install build-essential"
 
@@ -13,15 +13,22 @@ read versi
 if [ "$versi" == 1 ]
 then
 #echo "Versi 32 bit"
+#2013
 wget http://www.softether-download.com/files/softether/v2.00-9387-rtm-2013.09.16-tree/Linux/SoftEther%20VPN%20Server/32bit%20-%20Intel%20x86/softether-vpnserver-v2.00-9387-rtm-2013.09.16-linux-x86-32bit.tar.gz
-tar zxvf softether-vpnserver-v2.00-9387-rtm-2013.09.16-linux-x86-32bit.tar.gz 
+tar zxvf softether-vpnserver-v2.00-9387-rtm-2013.09.16-linux-x86-32bit.tar.gz
+#2014
+#wget http://www.softether-download.com/files/softether/v4.10-9473-beta-2014.07.12-tree/Linux/SoftEther_VPN_Server/32bit_-_Intel_x86/softether-vpnserver-v4.10-9473-beta-2014.07.12-linux-x86-32bit.tar.gz 
+#tar zxvf softether-vpnserver-v4.10-9473-beta-2014.07.12-linux-x86-32bit.tar.gz 
 elif [ "$versi" == 2 ]
 then
 #echo "versi debian 64 bit"
+#2013
 wget http://www.softether-download.com/files/softether/v2.00-9387-rtm-2013.09.16-tree/Linux/SoftEther%20VPN%20Server/64bit%20-%20Intel%20x64%20or%20AMD64/softether-vpnserver-v2.00-9387-rtm-2013.09.16-linux-x64-64bit.tar.gz
 tar zxvf softether-vpnserver-v2.00-9387-rtm-2013.09.16-linux-x64-64bit.tar.gz
+#2014
+#wget http://www.softether-download.com/files/softether/v4.10-9473-beta-2014.07.12-tree/Linux/SoftEther_VPN_Server/64bit_-_Intel_x64_or_AMD64/softether-vpnserver-v4.10-9473-beta-2014.07.12-linux-x64-64bit.tar.gz
+#tar zxvf softether-vpnserver-v4.10-9473-beta-2014.07.12-linux-x64-64bit.tar.gz
 fi
-
 
 #Pemindahan file dan pemberian hak eksekusi
 mv vpnserver /usr/local
@@ -64,7 +71,7 @@ echo "Sampai langkah di atas, installasi tahap 1 selesai" | tee -a log-softex-in
 echo "  " | tee -a log-softex-install.txt
 echo "Untuk melanjutkan installasi," | tee -a log-softex-install.txt
 echo "Silahkan ikuti langkah di atas" | tee -a log-softex-install.txt
-echo -n "silahkan ketik "1" (untuk ya):"
+echo -n "silahkan ketik "1" untuk melanjutkan installasi:"
 read ketik
 
 if [ "$ketik" == 1 ]
