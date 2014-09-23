@@ -57,7 +57,7 @@ sed -i $MYIP2 /etc/iptables.up.rules;
 iptables-restore < /etc/iptables.up.rules
 service openvpn restart
 
-echo -n "Jenis virtualisasi apa? (1.OVZ 2.KVM/XEN)
+echo -n "Jenis virtualisasi apa? (1.OVZ 2.KVM/XEN)"
 read virtualisasi
 
 if [ "$virtualisasi" == 1 ]
