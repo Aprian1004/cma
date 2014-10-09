@@ -89,10 +89,11 @@ cd /etc/openvpn/clientconfig
 wget https://raw.githubusercontent.com/cmaimu/debian7/master/client-udp-1194.ovpn 
 wget https://raw.githubusercontent.com/cmaimu/debian7/master/client-tcp-465.ovpn
 sed -i "s/remote xxxxxxxxxxxx 1194/remote $ipvps 1194/g" client-udp-1194.ovpn
-sed -i "s/remote xxxxxxxxxxxx 465/remote $ipvps 465/g" client-udp-465.ovpn
+sed -i "s/remote xxxxxxxxxxxx 465/remote $ipvps 465/g" client-tcp-465.ovpn
 
 
-zip client.zip
+zip client.zip *
+cp client.zip /home/vps/public_html/
 
 echo "Silahkan bagikan file client.zip pada membernya"
 
