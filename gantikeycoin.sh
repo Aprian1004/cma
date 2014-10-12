@@ -21,3 +21,10 @@ chmod +x cointellect.sh
 
 echo "Bila mau ganti key lagi, silahkan ketik"
 echo "./gantikey.sh"
+
+echo "Untuk memulai mining, silahkan ketik"
+echo "./cointellect.sh"
+
+echo "Note:"
+echo "Sebaiknya mining dilakukan di moder RDP"
+echo "Modified by insanulfaqir"
