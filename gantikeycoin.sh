@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #gantikeycoin.sh 
-#link 
+#link https://raw.githubusercontent.com/cmaimu/debian7/master/gantikeycoin.sh
 
 cd
 rm cointellect.sh
