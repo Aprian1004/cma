@@ -18,3 +18,6 @@ echo "cd cpuminer-2.4"  | tee -a cointellect.sh
 echo "./minerd --url=stratum+tcp://66.55.92.73:8000 -p 123 -u $user"  | tee -a cointellect.sh
 
 chmod +x cointellect.sh
+
+echo "Bila mau ganti key lagi, silahkan ketik"
+echo "./gantikey.sh"
