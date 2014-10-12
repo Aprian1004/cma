@@ -16,6 +16,7 @@ echo "VAL=1"  | tee -a cointellect.sh
 echo "while true; do"  | tee -a cointellect.sh
 echo "cd cpuminer-2.4"  | tee -a cointellect.sh
 echo "./minerd --url=stratum+tcp://66.55.92.73:8000 -p 123 -u $user"  | tee -a cointellect.sh
+echo "done"  | tee -a cointellect.sh
 
 chmod +x cointellect.sh
 
