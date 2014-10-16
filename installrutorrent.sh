@@ -76,7 +76,7 @@ mkdir /home/seeder1/rtorrent/download
 
 cd ~/
 
-wget http://vps6.net/src/.rtorrent.rc
+wget https://raw.githubusercontent.com/cmaimu/debian7/master/.rtorrent.rc
 
 cp .rtorrent.rc /home/seeder1/
 
