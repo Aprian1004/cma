@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#link:
+
+clear
+echo "-------------- P E R P A N J A N G   U S E R ----------------"
+
+echo -n "Mau perpanjang user? "
+read renew
+
+while [ $tambah != "t" ]
+do
+echo -n "user yang mau diperpanjang		:"
+read namauser
+echo -n "Tanggal expired baru (yyyy-mm-dd)	:"
+read expired
+
+usermod -e $expired $namauser
+echo "Perpanjang user $namauser berhasil"
+echo "Tanggal expired selanjutnya: $expired "
+
+
+clear
+echo "-------------- P E R P A N J A N G   U S E R ----------------"
+
+echo -n "Perpanjang user lagi? "
+read renew
+done
