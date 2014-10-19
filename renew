@@ -20,9 +20,10 @@ echo "Perpanjang user $namauser berhasil"
 echo "Tanggal expired selanjutnya: $expired "
 
 
-clear
+echo ""
 echo "-------------- P E R P A N J A N G   U S E R ----------------"
 
 echo -n "Perpanjang user lagi? "
 read tambah
 done
+echo "--------- P E R P A N J A N G   U S E R ( E N D ) ----------"
