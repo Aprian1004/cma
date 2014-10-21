@@ -15,7 +15,7 @@ read namauser
 echo -n "Tanggal expired baru (yyyy-mm-dd)	:"
 read expired
 
-usermod -e $expired $namauser
+usermod -e $expired -U $namauser
 echo "Perpanjang user $namauser berhasil"
 echo "Tanggal expired selanjutnya: $expired "
 
