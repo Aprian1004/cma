@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#link download:
+#link download: https://raw.githubusercontent.com/cmaimu/debian7/master/installmining.sh
 
 apt-get -y update && apt-get -y upgrade
 apt-get install yasm -y git make g++ build-essential libminiupnpc-dev
