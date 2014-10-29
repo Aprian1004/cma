@@ -22,6 +22,8 @@ apt-get update;apt-get -y install wget curl;
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # set locale
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+/usr/sbin/locale-gen
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
