@@ -7,7 +7,7 @@ MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 
-#link debian7.sh : http://cmdimu.tk/vps/debian7.sh
+#link debian7.sh : https://raw.githubusercontent.com/cmaimu/debian7/master/installdeb7.sh
 # go to root
 cd
 
