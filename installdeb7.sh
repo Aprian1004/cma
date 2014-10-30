@@ -219,6 +219,9 @@ echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 #sed -i '$ i\screen -AmdS check /root/autokill.sh' /etc/rc.local
 #liat total user dan tanggal expirednya
 wget -O /usr/bin/akun "https://raw.githubusercontent.com/cmaimu/debian7/master/akun"
+wget -O renew.sh "https://raw.githubusercontent.com/cmaimu/debian7/master/renew"
+wget -O add-user.sh "https://raw.githubusercontent.com/cmaimu/debian7/master/add-user.sh"
+
 chmod +x bench-network.sh
 chmod +x speedtest_cli.py
 chmod +x ps_mem.py
@@ -229,6 +232,8 @@ chmod +x userexpired.sh
 chmod +x dropmon
 chmod +x expire.sh
 chmod +x /usr/bin/akun
+chmod +x renew.sh
+chmod +x add-user.sh
 
 # finishing
 chown -R www-data:www-data /home/vps/public_html
@@ -279,6 +284,9 @@ echo "./speedtest_cli.py --share"  | tee -a log-install.txt
 echo "./bench-network.sh"  | tee -a log-install.txt
 echo "./userlogin.sh" | tee -a log-install.txt
 echo "./userexpired.sh" | tee -a log-install.txt
+echo "akun [untuk melihat total akun]" | tee -a log-install.txt
+echo "./renew.sh [untuk perpanjang akun]" | tee -a log-install.txt
+echo "./add-user.sh [untuk tambah user]" | tee -a log-install.txt
 #echo "./userlimit.sh 2 [ini utk melimit max 2 login]" | tee -a log-install.txt
 echo "sh dropmon [port] contoh: sh dropmon 443" | tee -a log-install.txt
 echo "akun [untuk melihat total user dan masa expirednya]" | tee -a log-install.txt
