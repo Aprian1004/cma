@@ -197,6 +197,9 @@ dpkg -i --force-all webmin_1.700_all.deb;
 apt-get -y -f install;
 rm /root/webmin_1.700_all.deb
 service webmin restart
+sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
+sed -i 's/SSL=1/SSL=0/g' /etc/webmin/miniserv.conf
+service webmin restart
 service vnstat restart
 
 # download script
