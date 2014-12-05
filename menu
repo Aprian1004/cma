@@ -1,9 +1,4 @@
 !/bin/bash
 
-
 echo "M E N U   V P S"
-echo "==============="
-echo ""
 cat log-install.txt
-echo ""
-echo "==============="
