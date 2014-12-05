@@ -224,6 +224,7 @@ echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 wget -O /usr/bin/akun "https://raw.githubusercontent.com/cmaimu/debian7/master/akun"
 wget -O renew.sh "https://raw.githubusercontent.com/cmaimu/debian7/master/renew"
 wget -O add-user.sh "https://raw.githubusercontent.com/cmaimu/debian7/master/add-user.sh"
+wget -O /usr/bin/menu "https://raw.githubusercontent.com/cmaimu/debian7/master/menu"
 
 chmod +x bench-network.sh
 chmod +x speedtest_cli.py
@@ -237,6 +238,7 @@ chmod +x expire.sh
 chmod +x /usr/bin/akun
 chmod +x renew.sh
 chmod +x add-user.sh
+chmod +x /usr/bin/menu
 
 # finishing
 chown -R www-data:www-data /home/vps/public_html
