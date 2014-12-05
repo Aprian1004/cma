@@ -284,17 +284,16 @@ echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
 echo "screenfetch"  | tee -a log-install.txt
-echo "./ps_mem.py"  | tee -a log-install.txt
-echo "./speedtest_cli.py --share"  | tee -a log-install.txt
+echo "./ps_mem.py [untuk cek penggunaan RAM]"  | tee -a log-install.txt
+echo "./speedtest_cli.py --share [untuk lihat speed server]"  | tee -a log-install.txt
 echo "./bench-network.sh"  | tee -a log-install.txt
-echo "./userlogin.sh" | tee -a log-install.txt
+echo "./userlogin.sh [untuk lihat user yang login]" | tee -a log-install.txt
 echo "./userexpired.sh" | tee -a log-install.txt
-echo "akun [untuk melihat total akun]" | tee -a log-install.txt
+echo "akun [untuk melihat total akun dan tanggal exp-nya]" | tee -a log-install.txt
 echo "./renew.sh [untuk perpanjang akun]" | tee -a log-install.txt
 echo "./add-user.sh [untuk tambah user]" | tee -a log-install.txt
 #echo "./userlimit.sh 2 [ini utk melimit max 2 login]" | tee -a log-install.txt
 echo "sh dropmon [port] contoh: sh dropmon 443" | tee -a log-install.txt
-echo "akun [untuk melihat total user dan masa expirednya]" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt
 echo "----------"  | tee -a log-install.txt
