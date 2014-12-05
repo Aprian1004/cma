@@ -60,6 +60,7 @@ apt-file update
 
 # setting vnstat
 vnstat -u -i venet0
+vnstat -u -i eth0
 service vnstat restart
 
 # install screenfetch
@@ -102,7 +103,7 @@ cd /etc/openvpn/
 wget -O /etc/openvpn/1194-client.ovpn "https://raw.github.com/yurisshOS/debian7os/master/1194-client.conf"
 sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-useradd -M -s /bin/false YurisshOS
+useradd -M -s /bin/false testcmd
 echo "testcmd:$PASS" | chpasswd
 echo "username" >> pass.txt
 echo "password" >> pass.txt
