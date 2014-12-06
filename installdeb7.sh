@@ -185,7 +185,7 @@ sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
 sed -i 's/Internal/Internet/g' config.php
 sed -i '/SixXS IPv6/d' config.php
 
-if [ "$virOS" == "y"]; then
+if [ $virOS == "y"]; then
 wget -O /home/vps/public_html/vnstat/config.php "https://raw.githubusercontent.com/cmaimu/debian7/master/configvnstatkvm"
 fi
 cd
