@@ -169,17 +169,25 @@ ln /usr/local/sbin/dropbear /usr/sbin/dropbear
 service dropbear restart
 
 # install vnstat gui
+echo -n "Virtualisasi KVM?"
+read virOS
+
 cd /home/vps/public_html/
 wget http://www.sqweek.com/sqweek/files/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
+
 cd vnstat
 sed -i 's/eth0/venet0/g' config.php
 sed -i "s/\$iface_list = array('venet0', 'sixxs');/\$iface_list = array('venet0');/g" config.php
 sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
 sed -i 's/Internal/Internet/g' config.php
 sed -i '/SixXS IPv6/d' config.php
+
+if [ "$virOS" == "y"]; then
+wget -O /home/vps/public_html/vnstat/config.php "https://raw.githubusercontent.com/cmaimu/debian7/master/configvnstatkvm"
+fi
 cd
 
 # install fail2ban
