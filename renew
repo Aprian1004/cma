@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#link:
+#link: wget "https://raw.githubusercontent.com/cmaimu/debian7/master/renew" && chmod+x renew
 
 clear
 echo "-------------- P E R P A N J A N G   U S E R ----------------"
