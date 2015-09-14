@@ -1,5 +1,5 @@
 #!/bin/bash
-#Link
+#Link https://raw.githubusercontent.com/cmaimu/debian7/master/add-user.sh
 
 clear
 echo "#######################################"
