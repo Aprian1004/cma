@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Link DL: 
+#Link DL: https://raw.githubusercontent.com/cmaimu/debian7/master/installwebmin.sh
 
 #update repo:
 echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
